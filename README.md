@@ -2,27 +2,14 @@
 
 Context:
 - `M`: Secret Message
-- `I`: Image Where `M` is gonna be Wrapped
-- `W`: Image Where `M` is Wrapped
+- `I`: Image where `M` is gonna be Wrapped
+- `W`: Image where `M` is Wrapped
 - `K`: Key to Wrap `M` into `I` & to Unwrap `M` out of `W`
 
 It allows to:
 - Generate `K`.
 - Wrap `M` into `W` using Random LSBs.
 - Unwrap `M` out of `W`.
-
----
-
-### Generating `K`:
-
-Command:
-- `mvn exec:java -Dexec.class="LSBKeyGenerator" -Dexec.args="{0} {1} {2} {3}"`
-
-Arguments:
-- `{0}`: Min `I` Width
-- `{1}`: Min `I` Height
-- `{2}`: Number of Bytes in `M` (Size of `M` File)
-- `{3}`: Pathname to Store `K` (`K` Filename: `{3}/LSB.key`)
 
 ---
 
@@ -34,8 +21,7 @@ Command:
 Arguments:
 - `{0}`: `I` File
 - `{1}`: `M` File
-- `{2}`: `K` File
-- `{3}`: Pathname to Store `W` (`W` Filename: `{3}/Wrapper.png`)
+- `{2}`: Pathname to Store `W` & `K` (`W` Filename: `{2}/Wrapper.png`, `K` Filename: `{2}/LSB.key`)
 
 ---
 
@@ -54,3 +40,4 @@ Arguments:
 | Name | University | Email |
 | ---- | ---- | ---- |
 | Ricardo Grade | Técnico Lisboa | ricardo.grade@tecnico.ulisboa.pt |
+
