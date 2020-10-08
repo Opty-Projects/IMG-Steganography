@@ -6,17 +6,16 @@ Context:
 - `W`: Image where `M` is Wrapped
 - `K`: Key to Wrap `M` into `I` & to Unwrap `M` out of `W`
 
-It allows to:
-- Generate `K`.
-- Wrap `M` into `W` using Random LSBs.
-- Unwrap `M` out of `W`.
+Functionalities:
+- Wrap `M` into `W` using a `K` randomly generated.
+- Unwrap `M` out of `W` using the same `K`.
 
 ---
 
 ### Wrapping `M`:
 
 Command:
-- `mvn exec:java -Dexec.class="LSBWrap" -Dexec.args="{0} {1} {2} {3}"`
+- `mvn exec:java -Dexec.class="LSBWrap" -Dexec.args="{0} {1} {2}"`
 
 Arguments:
 - `{0}`: `I` File
